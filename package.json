@@ -1,0 +1,33 @@
+{
+  "name": "road-to-refuge-app",
+  "version": "0.0.1",
+  "description": "Road To Refuge Website",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@sgsibelle",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "css-loader": "^0.23.1",
+    "csstyle": "^1.5.0",
+    "eslint": "^2.13.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-webpack-plugin": "^2.21.0",
+    "node-sass": "^3.8.0",
+    "postcss-loader": "^0.9.1",
+    "raw-loader": "^0.5.1",
+    "resolve-url": "^0.2.1",
+    "resolve-url-loader": "^1.4.4",
+    "sass-loader": "^3.2.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-glob-entries": "^1.0.1"
+  }
+}
