@@ -3,7 +3,7 @@
 @include component(button) {
 
     // Variables ----------------------
-    $inputs_borderRadius: 4px !default;
+    $inputs_borderRadius: 30px !default;
     $inputs_borderWidth: 1px !default;
     $inputs_borderColor: #eee !default;
     $inputs_color: #000 !default;
@@ -13,21 +13,21 @@
     $inputs_fontSize: 1rem !default;
 
     $button_secondaryBackground: white;
+    $button_secondaryColor: #4C7EC5;
     $button_selectedColor: #4C7EC5;
 
     $button_primaryBackground: #4C7EC5 !default;
     $button_primaryColor: white !default;
 
     // Component ----------------------
-    padding: $inputs_paddingVertical $inputs_paddingHorizontal;
+    padding: $inputs_paddingVertical * 1.25 $inputs_paddingHorizontal * 3;
     background: transparent;
-    border: $inputs_borderWidth solid $inputs_borderColor;
-    border-bottom-color: darken($inputs_borderColor, 3%);
-    border-bottom-width: 2px;
+    border: none;
     color: $inputs_color;
     cursor: pointer;
     font-size: $inputs_fontSize;
     border-radius: $inputs_borderRadius;
+    min-height: 60px;
 
     // Options ----------------------
     @include option(selected) {
@@ -42,29 +42,13 @@
     };
 
     @include option(primary) {
-        min-width: 50%;
-        min-height: 60px;
-        padding: $inputs_paddingVertical * 1.25 $inputs_paddingHorizontal * 1.25;
         color: $button_primaryColor;
         background-color: $button_primaryBackground;
-        border-color: $button_primaryBackground;
-        border-bottom-color:darken($button_primaryBackground, 20%);
-        font-size: $inputs_fontSize;
-        font-weight: bold;
-        text-transform: uppercase;
     }
 
     @include option(secondary) {
-        min-width: 50%;
-        min-height: 60px;
-        padding: $inputs_paddingVertical * 1.25 $inputs_paddingHorizontal * 1.25;
-        color: $button_primaryColor;
+        color: $button_secondaryColor;
         background-color: $button_secondaryBackground;
-        border-color: $button_secondaryBackground;
-        border-bottom-color:darken($button_secondaryBackground, 20%);
-        font-size: $inputs_fontSize;
-        font-weight: bold;
-        text-transform: uppercase;
     }
 
     @include option(small) {
