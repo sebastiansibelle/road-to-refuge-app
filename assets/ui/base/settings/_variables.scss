@@ -1,0 +1,31 @@
+// Colors
+
+$clr_text: #333;
+$clr_textSubdued: lighten($clr_text, 30%);
+$clr_heading: #1FA8DF;
+$clr_borderColor: lighten($clr_textSubdued, 30%);
+
+
+// Inputs ----------------------
+
+$inputs_paddingVertical: .75rem;
+$inputs_paddingHorizontal: 1rem;
+$inputs_fontSize: 1rem;
+$inputs_borderRadius: 4px;
+$inputs_borderWidth: 1px;
+$inputs_borderColor: lighten($clr_textSubdued, 30%);
+$inputs_color: #000;
+$inputs_errorColor: red;
+
+// Box
+
+$box_backgroundColor: rgba(238, 238, 238, 0.29);
+$box_borderColor: transparent;
+$box_borderRadius: 4px;
+$box_iconSize: .5rem;
+$box_fontSize: .8rem;
+$box_HeadingFontSize: .9rem;
+$box_padding: 1rem;
+$box_IconBackgroundColor: #FFB200;
+$box_IconBorderColor: transparent;
+$box_IconColor: white;
