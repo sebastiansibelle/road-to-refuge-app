@@ -4,12 +4,6 @@ import { storiesOf, action } from '@kadira/storybook';
 import Button from '../components/Button';
 
 storiesOf('Button', module)
-  .add('Default', () => (
-    <Button onClick={action('buttonClick')}>Get involved!</Button>
-  ))
-  .add('Default Selected', () => (
-    <Button isSelected onClick={action('buttonClick')}>Get involved!</Button>
-  ))
   .add('Primary', () => (
     <Button look="primary" onClick={action('buttonClick')}>Get involved!</Button>
   ))
@@ -27,12 +21,14 @@ storiesOf('Button', module)
   .add('Secondary', () => (
     <Button look="secondary" onClick={action('buttonClick')}>Get involved!</Button>
   ))
-  .add('Small', () => (
-    <Button look="small" onClick={action('buttonClick')}>Save</Button>
+  .add('Secondary Selected', () => (
+    <Button look="secondary" isSelected onClick={action('buttonClick')}>Get involved!</Button>
   ))
-  .add('Small Loading', () => (
-    <Button look="small" isLoading onClick={action('buttonClick')}>Save</Button>
+  .add('Secondary Disabled', () => (
+    <Button look="secondary" isDisabled onClick={action('buttonClick')}>Get involved!</Button>
   ))
-  .add('Small Selected', () => (
-    <Button look="small" isSelected onClick={action('buttonClick')}>Get involved!</Button>
-  ));
+  .add('Secondary Loading', () => (
+    <Button look="secondary" isLoading isDisabled onClick={action('buttonClick')}>
+      Get involved!
+    </Button>
+  ))

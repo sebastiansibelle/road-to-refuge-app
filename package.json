@@ -9,7 +9,8 @@
     "build:watch": "webpack --progress --colors --watch",
     "lint": "./node_modules/.bin/eslint resources/assets/ui",
     "lintfix": "npm run lint --- --fix",
-    "storybook": "start-storybook -p 9001"
+    "storybook": "start-storybook -p 9001",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "author": "@sgsibelle",
   "license": "ISC",
