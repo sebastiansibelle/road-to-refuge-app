@@ -3,35 +3,54 @@
 @include component(button) {
 
     // Variables ----------------------
-    $inputs_borderRadius: 30px !default;
+
+    // Fonts
+
+    $fontFamily: Roboto;
+
     $inputs_borderWidth: 1px !default;
     $inputs_borderColor: #eee !default;
     $inputs_color: #000 !default;
     $inputs_paddingVertical: .5rem !default;
     $inputs_paddingHorizontal: 1rem !default;
 
-    $inputs_fontSize: 1rem !default;
+    // Button Specific
 
-    $button_secondaryBackground: white;
-    $button_secondaryColor: #4C7EC5;
-    $button_selectedColor: #4C7EC5;
+    $button_fontSize: 1rem !default;
+
+    $button_background: transparent;
+    $button_selectedBackground: darken(white, 20%);
+    $button_borderRadius: 2em !default;
 
     $button_primaryBackground: #4C7EC5 !default;
     $button_primaryColor: white !default;
+    $button_primarySelectedBackground: darken($button_primaryBackground, 20%);
+
+    $button_secondaryBackground: white;
+    $button_secondaryColor: #4C7EC5;
+    $button_secondarySelectedBackground: darken(white, 20%);
 
     // Component ----------------------
     padding: $inputs_paddingVertical * 1.25 $inputs_paddingHorizontal * 3;
-    background: transparent;
+    background: $button_background;
     border: none;
     color: $inputs_color;
     cursor: pointer;
-    font-size: $inputs_fontSize;
-    border-radius: $inputs_borderRadius;
-    min-height: 60px;
+    border-radius: $button_borderRadius;
+    min-height: 25px;
+
+    font-family: $fontFamily;
+  	font-size: $button_fontSize;
+  	font-weight: 500;
+  	font-style: normal;
+  	font-stretch: normal;
+  	line-height: 1.93;
+  	letter-spacing: normal;
+  	text-align: center;
 
     // Options ----------------------
     @include option(selected) {
-        background: $button_selectedColor;
+        background: $button_selectedBackground;
         border-color: transparent;
         color: white;
     };
@@ -53,6 +72,6 @@
 
     @include option(small) {
         padding: $inputs_paddingVertical * 0.75 $inputs_paddingHorizontal * 0.75;
-        font-size: $inputs_fontSize * 0.8;
+        font-size: $button_fontSize * 0.8;
     };
 };
