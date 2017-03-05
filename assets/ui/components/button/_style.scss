@@ -16,7 +16,7 @@
     // Button Specific
     $button_fontSize: 1rem !default;
 
-    $button_background: transparent;
+    $button_background: transparent !default;
     $button_selectedBackground: darken(#4C7EC5, 10%);
     $button_borderRadius: 2em !default;
 
@@ -24,8 +24,8 @@
     $button_primaryColor: white !default;
     $button_primarySelectedBackground: darken($button_primaryBackground, 20%);
 
-    $button_secondaryBackground: white;
-    $button_secondaryColor: #4C7EC5;
+    $button_secondaryBackground: white !default;
+    $button_secondaryColor: #4C7EC5 !default;
     $button_secondarySelectedBackground: darken(white, 20%);
 
     // Component ----------------------
