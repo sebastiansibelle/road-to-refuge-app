@@ -15,7 +15,6 @@
     $inputs_paddingHorizontal: 1rem !default;
 
     // Button Specific
-
     $button_fontSize: 1rem !default;
 
     $button_background: transparent;
@@ -47,14 +46,9 @@
   	line-height: 1.93;
   	letter-spacing: normal;
   	text-align: center;
+    min-width: 185px;
 
     // Options ----------------------
-    @include option(selected) {
-        background: $button_selectedBackground;
-        border-color: transparent;
-        color: white;
-    };
-
     @include option(disabled) {
         opacity: 0.7;
         cursor: not-allowed;
@@ -73,5 +67,12 @@
     @include option(small) {
         padding: $inputs_paddingVertical * 0.75 $inputs_paddingHorizontal * 0.75;
         font-size: $button_fontSize * 0.8;
+        min-width: 185px * 0.8;
+    };
+
+    @include option(selected) {
+        background: $button_selectedBackground;
+        border-color: transparent;
+        color: white;
     };
 };

@@ -48,5 +48,8 @@
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1",
     "webpack-glob-entries": "^1.0.1"
+  },
+  "dependencies": {
+    "@kadira/storybook-deployer": "^1.2.0"
   }
 }
