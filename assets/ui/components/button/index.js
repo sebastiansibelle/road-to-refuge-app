@@ -51,7 +51,7 @@ const Button = ({
               '--loading': isLoading,
             },
             // support combinations eg.: look="secondary small"
-            look ? look.split(' ').map(l => `--${l}`) : undefined,
+            look ? look.split(' ').map(l => `--${l}`) : undefined
           )
         }
         data-tip

@@ -40,8 +40,17 @@
     }
 }
 
+@mixin toggleWithMobileMenu {
+    display: none;
+
+    @include breakpoint("phablet")
+    {
+        display: inline-block;
+    }
+}
+
 @mixin verticalSpacing($multiplier: 1, $tabletMultiplier: 1, $mobileMultiplier: 1) {
-    $verticalSpacing: 10px! default;
+    $verticalSpacing: 10px !default;
 
     padding-top: $verticalSpacing * $multiplier;
     padding-bottom: $verticalSpacing * $multiplier;

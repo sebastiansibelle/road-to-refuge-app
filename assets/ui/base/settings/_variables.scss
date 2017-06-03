@@ -5,8 +5,15 @@ $clr_textSubdued: lighten($clr_text, 30%);
 $clr_heading: #1FA8DF;
 $clr_borderColor: lighten($clr_textSubdued, 30%);
 
+$pink: #E444A0;
+$orange: #ffb200;
+$lightgrey: #c3c3c3;
+$darkgrey: #333;
+$white: #fff;
+$lightblue: #25aae1;
+$green: #28ab60;
 
-// Inputs ----------------------
+// Inputs
 
 $inputs_paddingVertical: .75rem;
 $inputs_paddingHorizontal: 1rem;
@@ -29,3 +36,11 @@ $box_padding: 1rem;
 $box_IconBackgroundColor: #FFB200;
 $box_IconBorderColor: transparent;
 $box_IconColor: white;
+
+
+// Spacing
+
+$verticalSpacing: 20px;
+$spacingLeftDsk: 5%;
+
+$mobileMenuBreakPoint: 540px;

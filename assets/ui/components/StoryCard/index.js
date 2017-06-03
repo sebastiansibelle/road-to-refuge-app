@@ -38,7 +38,7 @@ const StoryCard = ({
             '--loading': isLoading,
           },
           // support combinations eg.: look="secondary small"
-          look ? look.split(' ').map(l => `--${l}`) : undefined,
+          look ? look.split(' ').map(l => `--${l}`) : undefined
         )
       }
     >
@@ -56,7 +56,7 @@ StoryCard.propTypes = {
   location: PropTypes.string,
   imageUrl: PropTypes.string,
   onClick: PropTypes.func,
-  look: PropTypes.string,
+  look: PropTypes.string
 };
 
 export default StoryCard;

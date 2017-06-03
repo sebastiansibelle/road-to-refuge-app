@@ -63,6 +63,11 @@
         background-color: $button_primaryBackground;
     }
 
+    @include option(small){
+        padding: $inputs_paddingVertical * 0.625 $inputs_paddingHorizontal * 1.5;
+        min-width: 80px;
+    }
+
     @include option(secondary) {
         color: $button_secondaryColor;
         background-color: $button_secondaryBackground;
