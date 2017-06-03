@@ -1,0 +1,39 @@
+@import "base/helpers";
+@import 'variables';
+@import 'extends';
+
+@include component(navigation) {
+
+  // take remaining space
+  flex-grow: 1;
+  margin: 0;
+
+  @include part(items) {
+    @extend %unstyled-list;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  @include part(item) {
+    position: relative;
+    display: inline-block;
+
+    margin-right: 3%;
+    @include toggleWithMobileMenu;
+  }
+
+  @include part(link) {
+    color: $lightgrey;
+
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1em /*legacy:start*/!important/*legacy:end*/;
+    transition-duration: .15s;
+
+    &:hover {
+      color: lighten($darkgrey, 50%);
+    }
+  }
+}
