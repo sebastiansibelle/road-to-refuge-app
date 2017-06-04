@@ -1,0 +1,35 @@
+@import "base/helpers";
+
+@include component(banner) {
+
+  display: flex;
+
+  max-width: 1170px;
+
+  margin-right: auto;
+  margin-left: auto;
+  padding: 13px 15px;
+
+  // vertical alignment
+  align-items: center;
+  justify-content: center;
+
+  @include part(hamburger)
+  {
+    display: block;
+    justify-self: flex-start;
+    flex: 1;
+
+    @include breakpoint("phablet")
+    {
+      display: none;
+    }
+  }
+
+  @include part(logo)
+  {
+    flex: 2;
+  }
+}
+
+

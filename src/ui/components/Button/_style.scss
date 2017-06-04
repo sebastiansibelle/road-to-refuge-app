@@ -1,0 +1,81 @@
+@import "base/helpers";
+
+@include component(button) {
+
+    // Variables ----------------------
+
+    // Fonts
+    $fontFamily: Roboto;
+
+    $inputs_borderWidth: 1px !default;
+    $inputs_borderColor: #eee !default;
+    $inputs_color: #000 !default;
+    $inputs_paddingVertical: .5rem !default;
+    $inputs_paddingHorizontal: 1rem !default;
+
+    // Button Specific
+    $button_fontSize: 1rem !default;
+
+    $button_background: transparent !default;
+    $button_selectedBackground: darken(#4C7EC5, 10%);
+    $button_borderRadius: 2em !default;
+
+    $button_primaryBackground: #4C7EC5 !default;
+    $button_primaryColor: white !default;
+    $button_primarySelectedBackground: darken($button_primaryBackground, 20%);
+
+    $button_secondaryBackground: white !default;
+    $button_secondaryColor: #4C7EC5 !default;
+    $button_secondarySelectedBackground: darken(white, 20%);
+
+    // Component ----------------------
+    padding: $inputs_paddingVertical * 1.25 $inputs_paddingHorizontal * 3;
+    background: $button_background;
+    border: none;
+    color: $inputs_color;
+    cursor: pointer;
+    border-radius: $button_borderRadius;
+    min-height: 25px;
+
+    font-family: $fontFamily;
+  	font-size: $button_fontSize;
+  	font-weight: 500;
+  	font-style: normal;
+  	font-stretch: normal;
+  	line-height: 1.93;
+  	letter-spacing: normal;
+  	text-align: center;
+    min-width: 185px;
+
+    &:hover{
+      transition: all 0.5s ease;
+      opacity: 0.8;
+    }
+
+    // Options ----------------------
+    @include option(disabled) {
+        opacity: 0.7;
+        cursor: not-allowed;
+    };
+
+    @include option(primary) {
+        color: $button_primaryColor;
+        background-color: $button_primaryBackground;
+    }
+
+    @include option(small){
+        padding: $inputs_paddingVertical * 0.625 $inputs_paddingHorizontal * 1.5;
+        min-width: 80px;
+    }
+
+    @include option(secondary) {
+        color: $button_secondaryColor;
+        background-color: $button_secondaryBackground;
+    }
+
+    @include option(selected) {
+        background: $button_selectedBackground;
+        border-color: transparent;
+        color: white;
+    };
+};

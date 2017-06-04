@@ -3,19 +3,13 @@
   "version": "0.0.1",
   "description": "Road To Refuge Website",
   "main": "index.js",
-  "scripts": {
-    "start": "webpack-dev-server",
-    "build": "NODE_ENV='production' webpack --optimize-dedupe --optimize-occurence-order --optimize-minimize -p",
-    "build:watch": "webpack --progress --colors --watch",
-    "lint": "./node_modules/.bin/eslint resources/assets/ui",
-    "lintfix": "npm run lint --- --fix",
-    "storybook": "start-storybook -p 9001",
-    "deploy-storybook": "storybook-to-ghpages"
-  },
   "author": "@sgsibelle",
   "license": "ISC",
+  "private": true,
   "devDependencies": {
-    "@kadira/storybook": "^2.35.3",
+    "react-scripts": "1.0.7",
+    "@kadira/storybook": "~2.*",
+    "@kadira/storybook-deployer": "~1.*",
     "autoprefixer": "^6.3.6",
     "babel-core": "^6.10.4",
     "babel-eslint": "^6.0.2",
@@ -50,7 +44,14 @@
     "webpack-dev-server": "^1.14.1",
     "webpack-glob-entries": "^1.0.1"
   },
-  "dependencies": {
-    "@kadira/storybook-deployer": "^1.2.0"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "deploy-storybook": "storybook-to-ghpages",
+    "lint": "./node_modules/.bin/eslint src/ui",
+    "build-storybook": "build-storybook -s public"
   }
 }
