@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
-import '_style.scss';
+import './_style.scss';
 
 import StoryCard from '../StoryCard';
 

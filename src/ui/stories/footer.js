@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
 
-import Header from '../components/Header';
+import Footer from '../components/Footer';
 
-storiesOf('Header', module)
+storiesOf('Footer', module)
   .add('Primary', () => (
-    <Header></Header>
+    <Footer />
   ))

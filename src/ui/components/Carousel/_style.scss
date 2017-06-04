@@ -1,0 +1,5 @@
+@import "base/helpers";
+
+@include component(carousel) {
+  display: flex;
+};

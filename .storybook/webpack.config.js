@@ -5,26 +5,26 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const CSS_MAPS = global.ENV !== 'production';
 
-const BASE = '../assets/ui';
+const BASE = '../src/ui';
 
 module.exports = {
   resolve: {
-    extensions: ['', '.jsx', '.js', '.json', '.scss'],
+    extensions: ['', '.jsx', '.js', '.json', '.scss']
   },
   module: {
     loaders: [
       { // transpile es2015 / JS
         test: /\.js?$/,
         exclude: /node_modules/,
-        loader: 'babel',
+        loader: 'babel'
       },
       {
         test: /\.(scss|css)$/,
-        loaders: ['style', 'css', 'postcss', 'sass'],
+        loaders: ['style', 'css', 'postcss', 'sass']
       },
       {
         test: /\.(png|jpg|gif)$/,
-        loader: 'url-loader?limit=8192',
+        loader: 'url-loader?limit=8192'
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
@@ -33,7 +33,7 @@ module.exports = {
     ]
   },
   postcss: () => [
-    autoprefixer({ browsers: 'last 2 versions' }),
+    autoprefixer({ browsers: 'last 2 versions' })
   ],
   sassLoader: {
     includePaths: [

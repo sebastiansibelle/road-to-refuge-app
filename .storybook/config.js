@@ -4,7 +4,7 @@ import path from 'path';
 
 function loadStories() {
   require('../src/ui/stories');
-  require('../assets/ui/base/index.scss');
+  require('../src/ui/base/index.scss');
 }
 
 configure(loadStories, module);

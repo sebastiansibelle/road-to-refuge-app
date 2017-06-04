@@ -1,9 +1,0 @@
-@import "base/helpers";
-@import "base/animations/rotate";
-
-@include component(loading-indicator) {
-    display: inline-block;
-    svg {
-        animation: rotate 1.1s infinite linear;
-    }
-};
